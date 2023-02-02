@@ -2,7 +2,8 @@
  * @param {typeof import("fs")} fs
  * @param {string} dir
  */
-function getSubdirNames({ fs, dir}) {
+function getSubdirNames(dir) {
+  const fs = require("fs");
   return fs
     .readdirSync(dir, { withFileTypes: true })
     .filter((x) => x.isDirectory())
