@@ -42,6 +42,9 @@ function parseTag({ core, tag }) {
 
   core.setOutput("module_path", `${moduleFolder}/${moduleName}`);
   core.setOutput("version", version);
+
+  const readmeLink = `https://github.com/Azure/bicep-registry-modules/tree/${moduleName}/${tag}/modules/${moduleName}/README.md`;
+  core.setOutput("documentation_uri", readmeLink);
 }
 
 module.exports = parseTag;
