@@ -1,6 +1,9 @@
 name: Publish module
 
 on:
+  pull_request:
+    branches:
+      - main
   workflow_call:
     inputs:
       tag:
